@@ -12,24 +12,26 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '100vh',
-    padding: theme.spacing(3),
+    padding: theme.spacing(5), // Increased padding
     backgroundColor: theme.palette.background.default,
   },
   hiddenInput: {
     display: 'none',
   },
   button: {
-    margin: theme.spacing(2),
+    margin: theme.spacing(3), // Increased margin
     position: 'relative',
+    padding: theme.spacing(2), // Increased padding
+    fontSize: '1.25rem', // Larger font size
   },
   card: {
-    maxWidth: 345,
-    width: '100%', // Ensures the card is responsive
-    margin: theme.spacing(2),
+    maxWidth: '100%', // Use maximum width available
+    width: 500, // Increased width
+    margin: theme.spacing(3), // Increased margin
     position: 'relative', // For the spinner positioning
   },
   media: {
-    height: 300,
+    height: 400, // Increased height
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -40,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    zIndex: 2, // Ensure spinner is above the image
+  },
+  captionContent: {
+    padding: theme.spacing(2), // Increased padding
   },
 }));
 
@@ -90,7 +96,7 @@ const App = () => {
 
   return (
     <Paper elevation={3} className={classes.root}>
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Typography variant="h3" component="h1" gutterBottom> {/* Increased size */}
         AI Instagram Caption Generator
       </Typography>
       <input
@@ -121,12 +127,12 @@ const App = () => {
         )}
         {loading && (
           <div className={classes.spinnerOverlay}>
-            <CircularProgress />
+            <CircularProgress size={68} /> {/* Increased size */}
           </div>
         )}
         {!loading && caption && (
-          <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+          <CardContent className={classes.captionContent}>
+            <Typography variant="body1" component="p"> {/* Increased size */}
               {caption}
             </Typography>
           </CardContent>
