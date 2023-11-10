@@ -1,0 +1,95 @@
+/* App.css */
+.App {
+  font-family: 'Arial', sans-serif;
+  color: #000;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.NavigationBar {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.NavigationBar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.NavigationBar li {
+  cursor: pointer;
+}
+
+.ImageUpload {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ImageUpload input {
+  display: none; /* Hide the default input */
+}
+
+.ImageUpload button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.ImageUpload button:hover {
+  background-color: #333;
+}
+
+.ImageDisplayArea {
+  border: 1px solid #ccc;
+  width: 60%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust as needed */
+}
+
+.CaptionDisplay {
+  margin-bottom: 50px;
+}
+
+.CaptionDisplay p {
+  color: #000;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #000;
+  width: 60%;
+  text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .ImageDisplayArea {
+    width: 80%;
+  }
+
+  .CaptionDisplay p {
+    width: 80%;
+  }
+
+  .NavigationBar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

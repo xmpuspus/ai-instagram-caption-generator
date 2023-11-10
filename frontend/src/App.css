@@ -1,0 +1,28 @@
+/* App.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.centered-image {
+  display: block;
+  max-width: 300px; /* Adjust the size of the square */
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  margin: 20px auto;
+  object-fit: cover; /* This will cover the square area, potentially cropping the image */
+  border: 1px solid #ddd; /* Optional: adds a border around the image */
+  box-shadow: 2px 2px 4px #bbb; /* Optional: adds a shadow for some depth */
+}
+
+.caption {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
+}
